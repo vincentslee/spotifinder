@@ -1,0 +1,3 @@
+[submodule "spotifinder"]
+	path = spotifinder
+	url = https://github.com/eliaswolfgang/test-project-repo.git
