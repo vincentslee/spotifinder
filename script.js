@@ -90,6 +90,42 @@ function videodisplay(displayedvideos){
     }
 }
 
+$("#happy").on("click", function () {
+    searchterm = "happy";
+  youtubesearch(searchterm, howmany);
+});
 
+$("#love").on("click", function () {
+    searchterm = "I am in love.";
+  youtubesearch(searchterm, howmany);
+});
 
+$("#sleepy").on("click", function () {
+    searchterm = "sleepy";
+  youtubesearch(searchterm, howmany);
+});
 
+$("#excited").on("click", function () {
+    searchterm = "excited";
+  youtubesearch(searchterm, howmany);
+});
+
+$("#sad").on("click", function () {
+    searchterm = "sad";
+  youtubesearch(searchterm, howmany);
+});
+
+$("#mad").on("click", function () {
+    searchterm = "mad";
+  youtubesearch(searchterm, howmany);
+});
+
+$("#strong").on("click", function () {
+    searchterm = "strong";
+  youtubesearch(searchterm, howmany);
+});
+
+$("#relaxed").on("click", function () {
+    searchterm = "relaxed";
+  youtubesearch(searchterm, howmany);
+});
