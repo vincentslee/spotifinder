@@ -27,7 +27,7 @@
         -  Vincent / Charlene / Ian
             - Ian - Emotional API 
             - Vincent - Spotify
-            - Charlene - Search terms with results
+            - Charlene - Search terms with results / Recall
     - Javascript - Serverside API
         -   Vincent / Charlene / Ian
 - Create A Timeline
