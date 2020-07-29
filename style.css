@@ -45,8 +45,8 @@ label {
 .video-responsive iframe{
     left:0;
     top:0;
-    height:100%;
-    width:100%;
+    height:50%;
+    width:50%;
     position:absolute;
 }
 
@@ -126,17 +126,17 @@ a.pure-button-primary {
     z-index: 4;
 }
 
-.home-menu .pure-menu-heading {
+/* .home-menu .pure-menu-heading {
     color: white;
     font-weight: 400;
     font-size: 120%;
-}
+} */
 
-.home-menu .pure-menu-selected a {
+/* .home-menu .pure-menu-selected a {
     color: white;
-}
+} */
 
-.home-menu a {
+/* .home-menu a {
     color: #6FBEF3;
 }
 .home-menu li a:hover,
@@ -144,7 +144,7 @@ a.pure-button-primary {
     background: none;
     border: none;
     color: #AECFE5;
-}
+} */
 
 
 /*
@@ -152,16 +152,24 @@ a.pure-button-primary {
  * This is the blue top section that appears on the page.
  */
 
-.splash-container {
+ .splash-container {
     /* background-image: url(); */
-    z-index: 1;
-    overflow: hidden;
+    /* z-index: 1; */
+    /* overflow: hidden; */
     /* The following styles are required for the "scroll-over" effect */
     width: 100%;
     height: 88%;
-    top: 0;
-    left: 0;
-    position: fixed !important;
+    top:0;
+    /* left: 10; */
+    /* position: fixed !important; */
+
+    position: fixed;
+    /* top: 87%;
+    width: 100%;
+    min-height: 12%; */
+    /* z-index: ; */
+    /* background: white; */
+    bottom: 0;
 }
 
 .splash {
@@ -170,7 +178,7 @@ a.pure-button-primary {
     height: 50%;
     margin: auto;
     position: absolute;
-    top: 100px; left: 0; bottom: 0; right: 0;
+    top: 0px; left: 0; bottom: 8; right: 0;
     text-align: center;
     text-transform: uppercase;
 }
@@ -205,8 +213,9 @@ a.pure-button-primary {
     width: 100%;
     min-height: 12%;
     z-index: 2;
-    background: white;
-
+    /* background: white; */
+    bottom: 0;
+    /* opacity: 50%; */
 }
 
 /* We want to give the content area some more padding */
@@ -223,9 +232,9 @@ a.pure-button-primary {
 }
 
 /* This is a modifier class used when the content-head is inside a ribbon */
-.content-head-ribbon {
+/* .content-head-ribbon {
     color: white;
-}
+} */
 
 /* This is the class used for the content sub-headers (<h3>) */
 .content-subhead {
@@ -248,6 +257,11 @@ a.pure-button-primary {
     bottom: 0;
     width: 100%;
 }
+
+/* .video-responsive{
+    height: 70px;
+    width: 50px;
+} */
 
 /*
  * -- TABLET (AND UP) MEDIA QUERIES --
