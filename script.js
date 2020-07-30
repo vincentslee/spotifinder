@@ -10,6 +10,12 @@ $("#searchbutton").on("click", function () {
     wordSearchText(feelingEntered);
 });
 
+$("#clearhbutton").on("click", function () {
+    event.preventDefault();
+    $("#viddisplay").append("");
+});
+
+
 // Uses search input to find appropriate emotion
 function wordSearchText(feelingEntered) {
     var settings = {
@@ -106,7 +112,7 @@ function youtubesearch(searchterm, howmany) {
         /* for (var i = 0; i < displayedvideos.length; i++) {
             for (var k = i + 1; k < displayedvideos.length; k++) {
 
-                if (stringSimilarity.compareTwoStrings(response.items[i].snippet.title, response.items[k].snippet.title) > 0.5) {
+                if ($(stringSimilarity).compareTwoStrings(response.items[i].snippet.title, response.items[k].snippet.title) > 0.5) {
                     var displayedvideos = displayedvideos.filter((displayedVideo, index) => index !== i);
                }
             }
