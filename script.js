@@ -3,49 +3,54 @@ var howmany = 5;
 //////////////////////
 $("#happy").on("click", function () {
     event.preventDefault();
-    $("#viddisplay").empty();
+    //$("#viddisplay").empty();
     var searchterm = "happy";
     youtubesearch(searchterm, howmany);
 });
+
 $("#love").on("click", function () {
     event.preventDefault();
-    $("#viddisplay").empty();
+    //$("#viddisplay").empty();
     var searchterm = "love";
     youtubesearch(searchterm, howmany);
 });
+
 $("#tired").on("click", function () {
     event.preventDefault();
-    $("#viddisplay").empty();
+    //$("#viddisplay").empty();
     var searchterm = "tired";
     youtubesearch(searchterm, howmany);
 });
+
 $("#party").on("click", function () {
     event.preventDefault();
-    $("#viddisplay").empty();
+    //$("#viddisplay").empty();
     var searchterm = "party";
     youtubesearch(searchterm, howmany);
 });
 $("#sad").on("click", function () {
     event.preventDefault();
-    $("#viddisplay").empty();
+    //$("#viddisplay").empty();
     var searchterm = "sad";
     youtubesearch(searchterm, howmany);
 });
 $("#angry").on("click", function () {
     event.preventDefault();
-    $("#viddisplay").empty();
+    //$("#viddisplay").empty();
     var searchterm = "angry";
     youtubesearch(searchterm, howmany);
 });
+
 $("#workout").on("click", function () {
     event.preventDefault();
-    $("#viddisplay").empty();
+    //$("#viddisplay").empty();
     var searchterm = "workout";
     youtubesearch(searchterm, howmany);
 });
+
 $("#country").on("click", function () {
     event.preventDefault();
-    $("#viddisplay").empty();
+    //$("#viddisplay").empty();
     var searchterm = "country";
     youtubesearch(searchterm, howmany);
 });
@@ -54,7 +59,7 @@ console.log("test");
 // Create function when searchButton is clicked
 $("#searchbutton").on("click", function () {
     event.preventDefault();
-    $("#viddisplay").empty();
+    //$("#viddisplay").empty();
     console.log("test");
     var feelingEntered = $('#searchbar').val();
 
@@ -113,7 +118,7 @@ function wordSearchText(feelingEntered) {
 
 
 function youtubesearch(searchterm, howmany){
-    
+    $("#viddisplay").empty();
     var displayedvideos = [];
     var resultsamount = howmany;
     var search = searchterm;
@@ -123,7 +128,7 @@ function youtubesearch(searchterm, howmany){
     //youtube api search request
     function repeatedSearch(limit) {
         var searchLimit;
-        var APIKey = "AIzaSyBQdkGkM_-6Q2wnGL5gicxnJmI4aA9r98U";
+        var APIKey = "AIzaSyC8qg399n7sQ_el7EAqqF2XEe5h--pU2O4";
         var queryURL = "https://www.googleapis.com/youtube/v3/search";
         if (limit !== resultsamount) {
             searchLimit = limit;
@@ -166,7 +171,7 @@ function youtubesearch(searchterm, howmany){
         //checks similarities between videos
         for (var i = 0; i < displayedvideos.length; i++) {
             for (var k = i + 1; k < displayedvideos.length; k++) {
-
+                console.log("title" + response.items[k].snippet.title);
                 if ( stringSimilarity.compareTwoStrings(response.items[i].snippet.title, response.items[k].snippet.title) > 0.5 ) {
                     console.log("deleted"+i+displayedvideos[i]);
                     var displayedvideos = displayedvideos.filter((displayedVideo, index) => index !== i);
@@ -196,7 +201,7 @@ function youtubesearch(searchterm, howmany){
             console.log(i,": ", vidlink);
 
             $("#viddisplay").append('<div class="is-center pure-u-md-1-4"><iframe src="https://www.youtube.com/embed/'+displayedvideos[i]+'"></iframe></div>');
-
+            //$("#viddisplay").append('<a href="https://www.youtube.com/watch?v='+displayedvideos[i]+'">link</a>')
 
             //This is a temporary solution
             //$("#results").append("<p>"+vidlink+"</p>");
