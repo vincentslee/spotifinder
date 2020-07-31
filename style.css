@@ -31,30 +31,30 @@ label {
     color: #34495e;
 }
 
-.pure-img-responsive {
+/* .pure-img-responsive {
     max-width: 100%;
     height: auto;
-}
+} */
 
-.video-responsive{
+/* .video-responsive{
     overflow:hidden;
     padding-bottom:56.25%;
     position:relative;
     height:0;
-}
-.video-responsive iframe{
+} */
+/* .video-responsive iframe{
     left:0;
     top:0;
     height:50%;
     width:50%;
     position:absolute;
-}
+} */
 
 /*
  * -- LAYOUT STYLES --
  * These are some useful classes which I will need
  */
-.l-box {
+/* .l-box {
     padding: 1em;
 }
 
@@ -65,8 +65,10 @@ label {
 
 .is-center {
     text-align: center;
+} */
+.is-center {
+    text-align: center;
 }
-
 
 
 /*
@@ -119,38 +121,7 @@ a.pure-button-primary {
 .home-menu {
     background: #2d3e50;
 }
-.pure-menu.pure-menu-fixed {
-    /* Fixed menus normally have a border at the bottom. */
-    border-bottom: none;
-    /* I need a higher z-index here because of the scroll-over effect. */
-    z-index: 4;
-}
 
-/* .home-menu .pure-menu-heading {
-    color: white;
-    font-weight: 400;
-    font-size: 120%;
-} */
-
-/* .home-menu .pure-menu-selected a {
-    color: white;
-} */
-
-/* .home-menu a {
-    color: #6FBEF3;
-}
-.home-menu li a:hover,
-.home-menu li a:focus {
-    background: none;
-    border: none;
-    color: #AECFE5;
-} */
-
-
-/*
- * -- SPLASH STYLES --
- * This is the blue top section that appears on the page.
- */
 
  .splash-container {
     /* background-image: url(); */
@@ -163,7 +134,7 @@ a.pure-button-primary {
     /* left: 10; */
     /* position: fixed !important; */
 
-    position: fixed;
+    position: absolute;
     /* top: 87%;
     width: 100%;
     min-height: 12%; */
@@ -209,13 +180,13 @@ a.pure-button-primary {
 .content-wrapper {
     /* These styles are required for the "scroll-over" effect */
     position: absolute;
-    top: 87%;
+    /* top: 87%; */
     width: 100%;
-    min-height: 12%;
+    height: 500px;
+    /* min-height: 12%; */
     z-index: 2;
-    /* background: white; */
     bottom: 0;
-    /* opacity: 50%; */
+    
 }
 
 /* We want to give the content area some more padding */
@@ -231,10 +202,7 @@ a.pure-button-primary {
     margin: 2em 0 1em;
 }
 
-/* This is a modifier class used when the content-head is inside a ribbon */
-/* .content-head-ribbon {
-    color: white;
-} */
+
 
 /* This is the class used for the content sub-headers (<h3>) */
 .content-subhead {
@@ -244,11 +212,7 @@ a.pure-button-primary {
         margin-right: 7px;
     }
 
-/* This is the class used for the dark-background areas. */
-.ribbon {
-    background: #2d3e50;
-    color: #aaa;
-}
+
 
 /* This is the class used for the footer */
 .footer {
@@ -258,10 +222,6 @@ a.pure-button-primary {
     width: 100%;
 }
 
-/* .video-responsive{
-    height: 70px;
-    width: 50px;
-} */
 
 /*
  * -- TABLET (AND UP) MEDIA QUERIES --
@@ -275,19 +235,9 @@ a.pure-button-primary {
         font-size: 16px;
     }
 
-    /* We can align the menu header to the left, but float the
-    menu items to the right. */
-    .home-menu {
-        text-align: left;
-    }
-        .home-menu ul {
-            float: right;
-        }
+    
 
-    /* We increase the height of the splash-container */
-/*    .splash-container {
-        height: 500px;
-    }*/
+ 
 
     /* We decrease the width of the .splash, since we have more width
     to work with */
@@ -313,9 +263,13 @@ a.pure-button-primary {
  * On desktops and other large devices, we want to over-ride some
  * of the mobile and tablet styles.
  */
-@media (min-width: 78em) {
+
+ @media (min-width: 78em) {
     /* We increase the header font size even more */
     .splash-head {
         font-size: 300%;
     }
 }
+
+
+
